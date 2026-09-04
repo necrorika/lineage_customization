@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Advanced Reboot: 0 = disabled, 1 = enabled, 2 = secured -->
+    <integer name="def_advanced_reboot">1</integer>
+    <bool name="def_advanced_reboot">true</bool>
+
+    <!-- Battery Percentage in Status Bar -->
+    <bool name="def_battery_percentage">true</bool>
+</resources>

@@ -1,0 +1,32 @@
+on property:sys.boot_completed=1
+    exec_background - root root -- /system/bin/setprop persist.sys.custom_marker worked
+
+    # Force Developer Options
+    # exec_background - root root -- /system/bin/settings put global development_settings_enabled 1
+    
+
+    
+    # Disable Storage Manager (Smart Storage)
+    # exec_background - root root -- /system/bin/settings put global storage_manager_enabled 0
+
+    # Enable Status Bar Battery %
+    # exec_background - root root -- /system/bin/content insert --uri content://lineagesettings/system --bind name:s:status_bar_show_battery_percent --bind value:s:1  
+
+    # Force Advanced Reboot (Lineage Secure Setting)
+    # exec_background - root root -- /system/bin/content insert --uri content://lineagesettings/secure --bind name:s:advanced_reboot --bind value:s:1
+   
+    # Mark done so it only runs once per boot lifetime
+    # setprop persist.sys.custom_settings_applied 1
+
+    # removed stuff
+
+    # && property:persist.sys.custom_settings_applied=
+    
+    # Force Advanced Reboot (Lineage Secure Setting)
+    # exec_background - root root -- /system/bin/settings put secure advanced_reboot 1
+
+    # Disable Storage Manager (Smart Storage)
+    # exec_background - root root -- /system/bin/settings put secure storage_manager_enabled 0
+    
+    # Enable Status Bar Battery %
+    # exec_background - root root -- /system/bin/settings put system status_bar_show_battery_percent 1

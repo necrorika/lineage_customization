@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Force Developer Options entry to always stay visible in Settings > System -->
+    <bool name="config_show_development_settings_dashboard">true</bool>
+</resources>

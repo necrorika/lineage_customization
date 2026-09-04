@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MY EDIT -->
+    <!-- Set the Screen Timeout to 10 minutes (600,000 milliseconds) -->
+    <integer name="config_screenTimeout">600000</integer>
+
+    <!-- Enable 120hz adaptive display refresh rate by default -->
+    <integer name="config_defaultRefreshRate">120</integer>
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Default Camera Role Handler Package Name -->
+    <string name="config_defaultCamera" translatable="false">com.google.android.GoogleCamera</string>
+
+    <!-- Enable Developer Options by default on first boot -->    
+    <bool name="config_enableDeveloperOptionsByDefault">true</bool>
+
+    <!-- Enable Advanced Restart in Global Power Menu -->
+    <bool name="def_advanced_reboot">true</bool>
+
+    <!-- Show Battery Percentage by default -->
+    <integer name="def_status_bar_show_battery_percent">1</integer>
+
+    <!-- Disable Storage Manager / Automatic Storage Cleanup -->
+    <bool name="config_storage_manager_default_enabled">false</bool>
+
+    <!-- These below are my old attempts... hopefully above will work better. Specifically above,
+    what I'm changing is: 
+    Showing Developer Options by default on the first boot (currently, I have to 
+    search for it to get it to show in Settings > System Settings, but the idea here is that it'll show
+    by default.)
+    <bool name="config_enableDeveloperOptionsByDefault">true</bool>
+    Enabling Advanced Restart in the Power Menu (it's the one where you hold the power button in)
+    <bool name="config_advanced_reboot">true</bool>
+    Show Battery Percentage by default inside of the battery bar
+    <bool name="config_defaultBatteryPercentageSetting">true</bool>
+    Disable the Storage Manager / 90 day Automatic Storage Cleanup by default (this Storage Manager
+    is enabled by default for some stupid reason, and it deletes photos every 90 days to "free up space")
+    <bool name="config_storageManagerDefaultEnabled">false</bool>
+    -->
+</resources>

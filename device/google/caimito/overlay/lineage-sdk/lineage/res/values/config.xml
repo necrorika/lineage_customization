@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MY EDIT -->
+    <!-- Disable Trust interface boot warnings (the notification that won't fuck off) -->
+    <integer name="def_trust_warning_keys">0</integer>
+    <integer name="def_trust_warning_selinux">0</integer>
+    <integer name="def_trust_warning_unlocked">0</integer>
+
+    <!-- Lineage Status Bar Battery Percentage Show by Default-->
+    <integer name="config_defaultStatusBarBattery">1</integer>
+    <bool name="config_defaultShowBatteryPercent">true</bool>
+</resources>

@@ -1,0 +1,146 @@
+android_app_import {
+    name: "Cromite",
+    apk: "Cromite.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+    overrides: ["Jelly"], // Replaces default browser
+}
+
+//android_app_import {
+//    name: "GCam",
+//    apk: "GCam.apk",
+//    default_dev_cert: true,
+//    dex_preopt: {
+//       enabled: false,
+//  },
+//    product_specific: true,
+//    overrides: ["Aperture", "ApertureLensLauncher"], // Replaces default camera
+//}
+
+android_app_import {
+    name: "AdAway",
+    apk: "AdAway.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+    overrides: [
+        "AudioFX", "HotwordEnrollmentOKGoogleFUSIONPro", "HotwordEnrollmentXGoogleFUSIONPro", "ApertureOverlayTokay", "com.android.hotwordenrollment.common.util",], 
+        // Removes
+        // These fucking dumbasses too
+}
+
+android_app_import {
+    name: "ColorBlendr",
+    apk: "ColorBlendr.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "ProShot",
+    apk: "ProShot.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "Tailscale",
+    apk: "Tailscale.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "ProtonVPN",
+    apk: "ProtonVPN.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+    overrides: ["Twelve", "Etar", "Aperture", "ApertureLensLauncher",], // Removes Music and Calendar (Calendar will be replaced with Google Calendar)
+}
+
+android_app_import {
+    name: "FDroid",
+    apk: "FDroid.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "KeePassDX",
+    apk: "KeePassDX.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "ProtonMail",
+    apk: "ProtonMail.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "SimpleGallery",
+    apk: "SimpleGallery.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "Snapseed",
+    apk: "Snapseed.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "Syncthing",
+    apk: "Syncthing.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}
+
+android_app_import {
+    name: "ytheekshanaDeviceInfo",
+    apk: "ytheekshanaDeviceInfo.apk",
+    default_dev_cert: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    product_specific: true,
+}

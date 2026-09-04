@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MY EDITS -->
+
+    <!-- 10 minutes = 600000 ms -->
+    <integer name="def_screen_off_timeout">600000</integer>
+
+    <!-- Ringer Mode Defaults: 
+         0 = RINGER_MODE_SILENT (Mute)
+         1 = RINGER_MODE_VIBRATE
+         2 = RINGER_MODE_NORMAL
+    -->
+    <integer name="def_ringer_mode">0</integer>
+
+    <!-- Enable Developer Options on first boot -->
+    <bool name="def_development_settings_enabled">true</bool>
+    <integer name="def_development_settings_enabled">1</integer>
+
+    <!-- Hopefully Blossom Monet Theme Overlay -->
+    <!--<string name="def_theme_customization_overlay_packages" translatable="false">{\"android.theme.customization.system_palette\":\"E9666C\",\"android.theme.customization.accent_color\":\"E9666C\",\"android.theme.customization.color_source\":\"preset\",\"android.theme.customization.color_style\":\"TONAL_SPOT\",\"android.theme.customization.custom_secondary\":\"DD4418\",\"android.theme.customization.custom_tertiary\":\"CA9EC2\"}</string>
+-->
+    <!--<string name="def_theme_customization_overlay_packages" translatable="false">{\"android.theme.customization.system_palette\":\"E9666C\",\"android.theme.customization.accent_color\":\"E9666C\",\"android.theme.customization.theme_style\":\"TONAL_SPOT\"}</string>
+-->
+
+    <!-- Enable Advanced Restart Menu by default -->
+    <bool name="def_advanced_reboot">true</bool>
+    <integer name="def_advanced_reboot">1</integer>
+
+    <!-- Show Battery Percentage in Status Bar by default -->
+    <bool name="def_battery_percentage">true</bool>
+
+    <!-- Disable the absolutely Storage Manager / Automatic Storage Cleanup -->
+    <!-- Why is this even enabled by default??? Delete ur photos after 90 days? -->
+    <bool name="def_storage_manager_enabled">false</bool>
+
+    <!-- Default Web Browser (Cromite) -->
+    <string name="def_custom_browser_component" translatable="false">org.cromite.cromite/org.chromium.chrome.browser.ChromeTabbedActivity</string>
+
+
+</resources>
+</resources>
