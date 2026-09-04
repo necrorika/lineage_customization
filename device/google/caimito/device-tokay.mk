@@ -78,14 +78,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/window_extensions.mk)
 
 # MY EDITs
 
-# Set Sounds Default to Silent / Mute on first boot
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.alarm_vol_default=0 \
-    ro.config.media_vol_default=0 \
-    ro.config.notification_vol_default=0 \
-    ro.config.vc_call_vol_default=0 \
-    ro.config.ring_vol_default=0
 
+
+# 1. Enable Developer Options by default and Mute the Ringer on new Flash
 PRODUCT_PRODUCT_PROPERTIES += \
     # 1. Developer Options Enabled by Default
     ro.debuggable=1 \
@@ -99,23 +94,18 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.config.vc_call_vol_default=0 \
     persist.sys.ringer_mode=0
 
-# Default the USB connection to File Transfer (MTP) while keeping ADB active
+# 2. Default the USB connection to File Transfer (MTP) while keeping ADB active
  PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
     ro.sys.usb.default.config=mtp,adb \
 
-# Disable Lineage Trust warnings (ain't work)
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.lineage.trust.warning.keys=0 \
-    persist.lineage.trust.warning.selinux=0 \
-    persist.lineage.trust.warning.unlocked=0
-    
-# Tell this dingleberry to use my caimito tokay overlays instead of zumapro which I haven't touched.
+# 3. Force the build to use my device/google/caimito overlays; it was using zumapro.    
+# 3. Tell this dingleberry to use my caimito tokay overlays instead of zumapro which I haven't touched.
 PRODUCT_PACKAGE_OVERLAYS += \
     device/google/caimito/overlay \
     vendor/lineage/overlay/common
 
-# Remove the stock packages I despise
+# 4. Remove the stock packages I despise
 PRODUCT_PACKAGES_REMOVE += \
     AudioFX \
     Jelly \
@@ -126,7 +116,7 @@ PRODUCT_PACKAGES_REMOVE += \
     Twelve \
     Etar
 
-# Packages I'm adding
+# 5. Packages I'm adding
 PRODUCT_PACKAGES += \
     Cromite \
     AdAway \
@@ -143,8 +133,28 @@ PRODUCT_PACKAGES += \
     ytheekshanaDeviceInfo
 
 
-PRODUCT_COPY_FILES += \
-    device/google/caimito/init.custom.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.custom.rc
 
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/etc/init/init.custom.rc
+# REMOVED / UNUSED / MISC:
+
+# 1. Set Sounds Default to Silent / Mute on first boot (I had this repeated for some reason)
+# PRODUCT_PRODUCT_PROPERTIES += \
+#    ro.config.alarm_vol_default=0 \
+#    ro.config.media_vol_default=0 \
+#    ro.config.notification_vol_default=0 \
+#    ro.config.vc_call_vol_default=0 \
+#    ro.config.ring_vol_default=0
+
+# Disable Lineage Trust warnings (ain't work)
+# PRODUCT_PRODUCT_PROPERTIES += \
+#    persist.lineage.trust.warning.keys=0 \
+#    persist.lineage.trust.warning.selinux=0 \
+#    persist.lineage.trust.warning.unlocked=0
+
+# 2. init.custom.rc setup
+# Copy init.custom.rc into etc/init/init.custom.rc on tokay
+# PRODUCT_COPY_FILES += \
+#    device/google/caimito/init.custom.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.custom.rc
+
+# Allowing init.custom.rc through the build
+#PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
+#    system/etc/init/init.custom.rc
