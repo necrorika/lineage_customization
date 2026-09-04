@@ -148,5 +148,3 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/etc/init/init.custom.rc
-
-# Misc comment I can delete once I prove I can push into git

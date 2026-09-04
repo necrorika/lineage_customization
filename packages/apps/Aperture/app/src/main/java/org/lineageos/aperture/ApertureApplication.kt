@@ -36,4 +36,3 @@ class ApertureApplication : Application() {
         )
     }
 }
-/* Misc comment I can delete that proves my bash sync can pickup new files cleanly */
