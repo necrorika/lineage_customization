@@ -130,8 +130,9 @@ PRODUCT_PACKAGES += \
     SimpleGallery \
     Snapseed \
     Syncthing \
-    ytheekshanaDeviceInfo
-
+    ytheekshanaDeviceInfo \
+    GoogleCamera \
+    privapp-permissions-google-camera
 
 
 # REMOVED / UNUSED / MISC:

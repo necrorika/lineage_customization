@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MY EDIT 
+Introduces the permissions needed for Google Camera com.google.android.GoogleCamera.
+Extracted from crDroid 12.11 for tokay.
+In theory, this along with GoogleCamera.apk should be all I need to get GoogleCamera working natively
+on my ROM. We'll see. 
+This avoids pulling system permission rules for apps I'm not bundling (yet), and can be dropped
+into any vendor tree independently. 
+-->
+
+<!--
+This XML file declares which signature / privileged permissions should be granted to privileged
+applications in /product GMS Devices with Google Camera. 
+It allows additional grants on top of privapp-permissions-platform.xml
+-->
+
+<permissions>
+    <privapp-permissions package="com.google.android.GoogleCamera">
+        <permission name="android.permission.ACCESS_BLOBS_ACROSS_USERS"/>
+        <permission name="android.permission.ALLOCATE_AGGRESSIVE"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INSTALL_PACKAGE_UPDATES"/>
+        <permission name="android.permission.BIND_WALLPAPER"/>
+        <permission name="android.permission.REBOOT"/>
+        <permission name="android.permission.MANAGE_WIFI_NETWORK_SELECTION"/>
+        <permission name="android.permission.LOCAL_MAC_ADDRESS"/>
+    </privapp-permissions>
+</permissions>
