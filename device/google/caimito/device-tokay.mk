@@ -132,7 +132,8 @@ PRODUCT_PACKAGES += \
     Syncthing \
     ytheekshanaDeviceInfo \
     GoogleCamera \
-    privapp-permissions-google-camera
+    privapp-permissions-google-camera \
+    PixelParts
 
 
 # REMOVED / UNUSED / MISC:

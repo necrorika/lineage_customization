@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023-2024 The Evolution X Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res-auto">
+
+    <com.android.settingslib.widget.TopIntroPreference
+        android:key="pixel_torch_intro"
+        android:title="@string/pixel_torch_summary" />
+
+    <SwitchPreference
+        android:key="pixel_torch_cycle_modes"
+        android:title="@string/pixel_torch_cycle_modes_title"
+        android:summary="@string/pixel_torch_cycle_modes_summary"
+        android:defaultValue="false" />
+
+    <!-- MY EDIT - Changes Pixel Torch Click Brightness. Max was first, then med, then low. Swapped and adjusted values.
+    I found an issue where if you use the Pixel Torch tile then click the Flashlight tile, it activates on the set Pixel
+    Torch brightness, and I really don't like that. Since you click it 4 times from start to deactivation, this allows 
+    Flashlight to be set at the max brightness now. -->
+    <org.evolution.pixelparts.CustomSeekBarPreference
+        android:key="pixel_torch_strength_1"
+        android:title="@string/pixel_torch_first_click_title"
+        android:max="45"
+        android:min="1"
+        android:defaultValue="15" />
+
+    <org.evolution.pixelparts.CustomSeekBarPreference
+        android:key="pixel_torch_strength_2"
+        android:title="@string/pixel_torch_second_click_title"
+        android:dependency="pixel_torch_cycle_modes"
+        android:max="45"
+        android:min="1"
+        android:defaultValue="30" />
+
+    <org.evolution.pixelparts.CustomSeekBarPreference
+        android:key="pixel_torch_strength_3"
+        android:title="@string/pixel_torch_third_click_title"
+        android:dependency="pixel_torch_cycle_modes"
+        android:max="45"
+        android:min="1"
+        android:defaultValue="45" />
+
+    <Preference
+        android:key="pixel_torch_button_service"
+        android:title="@string/pixel_torch_button_service_title"
+        android:summary="@string/pixel_torch_button_service_summary" />
+</PreferenceScreen>
