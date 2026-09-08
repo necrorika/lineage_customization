@@ -133,7 +133,12 @@ PRODUCT_PACKAGES += \
     ytheekshanaDeviceInfo \
     GoogleCamera \
     privapp-permissions-google-camera \
-    PixelParts
+    PixelParts \
+    BCR \
+    privapp-permissions-bcr \
+    Matlog \
+    Gboard
+
 
 
 # REMOVED / UNUSED / MISC:

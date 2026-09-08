@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MY EDIT
+Introduces the permissions needed for BCR com.chiller3.bcr-->
+<permissions>
+    <privapp-permissions package="com.chiller3.bcr">
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE" />
+        <permission name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    </privapp-permissions>
+</permissions>

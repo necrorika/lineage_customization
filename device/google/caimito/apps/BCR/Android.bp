@@ -1,0 +1,21 @@
+android_app_import {
+    name: "BCR",
+    apk: "BCR.apk",
+    presigned: true,
+    preprocessed: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+
+prebuilt_etc {
+    name: "privapp-permissions-bcr",
+    product_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-bcr.xml",
+    filename_from_src: true,
+
+}

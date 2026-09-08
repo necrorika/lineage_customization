@@ -146,7 +146,7 @@
         android:key="pixel_parts_settings"
         android:title="Pixel Features"
         android:summary="Thermal profiles, display, and hardware tweaks"
-        android:icon="@drawable/ic_settings_pixel"
+        android:icon="@drawable/ic_settings_multiuser"
         android:order="-10">
         <intent
         android:action="android.intent.action.MAIN"
