@@ -31,8 +31,11 @@
         launcher:screen="0"
         launcher:x="0"
         launcher:y="0"
+        launcher:packageName="com.google.android.GoogleCamera"
+        launcher:className="com.android.camera.CameraLauncher" />
+        <!--
         launcher:packageName="com.riseupgames.proshot2"
-        launcher:className="com.riseupgames.proshot2.activities.PermissionsActivity" />
+        launcher:className="com.riseupgames.proshot2.activities.PermissionsActivity" -->
 
     <!-- Pos 1: Simple Gallery Pro -->
     <favorite

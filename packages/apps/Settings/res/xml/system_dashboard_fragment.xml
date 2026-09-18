@@ -141,8 +141,10 @@
         android:fragment="com.android.settings.system.ResetDashboardFragment"
         settings:controller="com.android.settings.system.ResetPreferenceController"/>
 
-    <!-- MY EDIT - Include PixelParts inside Settings > System -->
-    <Preference
+    <!-- MY EDIT - Include PixelParts inside Settings > System 
+    I've removed this as I realized they already have dedicated menus in settings. 
+    Apps > PixelTorch, Display > AutoHBM & Saturation. -->
+    <!-- <Preference
         android:key="pixel_parts_settings"
         android:title="Pixel Features"
         android:summary="Thermal profiles, display, and hardware tweaks"
@@ -151,6 +153,6 @@
         <intent
         android:action="android.intent.action.MAIN"
         android:targetPackage="org.lineageos.settings.device"
-        android:targetClass="org.lineageos.settings.device.PixelPartsActivity" />
-    </Preference>
+        android:targetClass="org.lineageos.settings.device.PixelPartsActivity" /> 
+    </Preference> -->
 </PreferenceScreen>

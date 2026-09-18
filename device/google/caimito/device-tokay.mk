@@ -137,8 +137,12 @@ PRODUCT_PACKAGES += \
     BCR \
     privapp-permissions-bcr \
     Matlog \
-    Gboard
+    Gboard \
+    BatteryStatsViewer
 
+# 6. Pixel as Webcam over USB
+    PRODUCT_PACKAGES += \
+        DeviceAsWebcam
 
 
 # REMOVED / UNUSED / MISC:

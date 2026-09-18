@@ -27,7 +27,7 @@
     <integer name="def_advanced_reboot">1</integer>
 
     <!-- Show Battery Percentage in Status Bar by default -->
-    <bool name="def_battery_percentage">true</bool>
+    <integer name="def_status_bar_show_battery_percent" type="integer">1</integer>
 
     <!-- Disable the absolutely Storage Manager / Automatic Storage Cleanup -->
     <!-- Why is this even enabled by default??? Delete ur photos after 90 days? -->
