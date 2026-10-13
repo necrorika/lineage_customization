@@ -495,7 +495,8 @@ object CommonTileDefaults {
     val ChevronSize = 14.dp
     val ToggleTargetSize = 56.dp
     // MY EDIT - Bump TileHeight from 72 to 96
-    val TileHeight = 96.dp
+    // MY EDIT - Change the Bump height in TIleHeight from 96 to 48 as a test...
+    val TileHeight = 48.dp
     val TileStartPadding = 8.dp
     val TileEndPadding = 12.dp
     val TileDualTargetEndPadding = 8.dp

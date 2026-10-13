@@ -111,6 +111,9 @@ import com.android.systemui.res.R
 import kotlinx.coroutines.CoroutineScope
 // MY EDIT - import aspectRatio for circles
 // import androidx.compose.foundation.layout.aspectRatio
+// MY EDIT 
+import androidx.compose.runtime.compositionLocalOf
+val LocalTileColumnWidth = compositionLocalOf<androidx.compose.ui.unit.Dp> { androidx.compose.ui.unit.Dp.Unspecified }
 
 @Composable
 fun TileLazyGrid(
@@ -201,6 +204,7 @@ fun ContentScope.Tile(
 
         // TODO(b/361789146): Draw the shapes instead of clipping
         val tileShape by TileDefaults.animateTileShapeAsState(uiState.state)
+        // val tileShape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp)
         val animatedColor by animateColorAsState(colors.background, label = "QSTileBackgroundColor")
         val isDualTarget = uiState.handlesSecondaryClick
 
@@ -379,6 +383,37 @@ fun TileContainer(
     modifier: Modifier = Modifier,
     content: @Composable BoxScope.() -> Unit,
 ) {
+    val columnWidth = LocalTileColumnWidth.current
+    Box(
+        modifier =
+            modifier
+                .then(if (columnWidth != androidx.compose.ui.unit.Dp.Unspecified) Modifier.height(columnWidth) else Modifier.height(TileHeight))
+                .fillMaxWidth()
+                .tileCombinedClickable(
+                    onClick = onClick ?: {},
+                    onLongClick = onLongClick,
+                    accessibilityUiState = accessibilityUiState,
+                    iconOnly = iconOnly,
+                    isDualTarget = isDualTarget,
+                    interactionSource = interactionSource,
+                )
+                .tileTestTag(iconOnly),
+        content = content,
+    )
+}
+/*
+// This edit works, but it doesn't give me collumn control
+@Composable
+fun TileContainer(
+    onClick: (() -> Unit)?,
+    onLongClick: (() -> Unit)?,
+    accessibilityUiState: AccessibilityUiState,
+    iconOnly: Boolean,
+    isDualTarget: Boolean,
+    interactionSource: MutableInteractionSource?,
+    modifier: Modifier = Modifier,
+    content: @Composable BoxScope.() -> Unit,
+) {
     BoxWithConstraints(
         modifier =
             modifier
@@ -396,6 +431,7 @@ fun TileContainer(
         Box(modifier = Modifier.height(maxWidth), content = content)
     }
 }
+*/
 
 /*
 @Composable
